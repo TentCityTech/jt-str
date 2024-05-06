@@ -1,5 +1,6 @@
-<script>
-	import Newsletter from '../components/Newsletter.svelte';
+<script src="https://www.google.com/recaptcha/api.js" async defer>
+	// @ts-nocheck
+
 </script>
 
 <div class="flex flex-col justify-center items-center h-full">
@@ -14,6 +15,12 @@
 			Stay tuned for more details and be the first to book your unforgettable desert experience!
 		</p>
 	</article>
+	<form id="demo-form" action="?" method="POST">
+		<label for="email">Email</label>
+		<input id="email" type="email" /> <button class="g-recaptcha" data-sitekey="your_site_key" data-callback="onSubmit">Submit</button
+		>
+		<br />
+	</form>
 	<div
 		class="flex flex-col gap-5 bg-primary px-6 py-20 max-w-md shadow-2xl rounded-3xl sm:px-14 xl:items-center"
 	>
@@ -35,6 +42,7 @@
 					class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-base-100 placeholder:text-base-100 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-accent sm:text-sm sm:leading-6"
 					placeholder="Enter your email"
 				/>
+
 				<button
 					type="submit"
 					class="flex-none rounded-md bg-base-100 px-3.5 py-2.5 text-sm font-semibold text-base-content shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
